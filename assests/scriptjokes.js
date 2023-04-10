@@ -1,4 +1,4 @@
-let jokeDiv = document.querySelector(".joke");
+// let jokeDiv = document.querySelector(".joke");
 
 const options2 = {
 	method: 'GET',
@@ -8,22 +8,39 @@ const options2 = {
 	}
 };
 
-function search() {
-	var quotes = result.value; 
-	// console.log(quotes)
+function search(){
+	var quotes = result.quotes; 
+}	
+
+
+
+	
 
 fetch('https://good-quotes.p.rapidapi.com/tag/food?page=1', options2)
 	.then(response => response.json())
 	.then(response => console.log(response))
+	
 	.catch(err => console.error(err));
-console.log(Response)
+
+
+	function array(quotes, quote) {
+		this.quotes = quotes;
+		this.quote = quote;
+
+		  console.log( `${this.quotes} on ${this.quotes}`);
+		};
+
+
+
+
+
 // const foodQuote = result.quotes
 // console.log(foodQuote)
 
-// var=== randomItem = quotes[Math.floor(Math.random()*quotes.length)];
+// var  randomItem = quotes[Math.floor(Math.random()*quotes.length)];
 //     let pElement = document.createElement('p')
 //     pElement.textContent = randomItem;
 //    jokeDiv.appendChild(pElement);
 
- }
-searchBtn.addEventListener('click', search)
+// }
+// searchBtn.addEventListener('click', search)

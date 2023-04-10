@@ -1,2 +1,29 @@
 @charset "utf-8";
 @import "../node_modules/bulma/bulma.sass";
+
+
+
+@include (max) {
+  body{
+    background-color: bisque;
+  }
+  }
+
+  @include tablet {
+    // Styles applied
+    // above $tablet
+  }
+
+
+  @include tablet-only {
+    // Styles applied
+    // between $tablet
+    // and $desktop
+  }
+
+  @include desktop-only {
+    // Styles applied
+    // between $desktop
+    // and $widescreen
+  }
+
