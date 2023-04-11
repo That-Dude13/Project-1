@@ -3,27 +3,31 @@
 
 
 
-@include (max) {
+@include mobile {
   body{
     background-color: bisque;
+    $tablet
   }
+  
   }
 
   @include tablet {
-    // Styles applied
-    // above $tablet
-  }
+    body{
 
+        background-color: azure;
+       $desktop
+  }
+  }
 
   @include tablet-only {
-    // Styles applied
-    // between $tablet
-    // and $desktop
+    body{
+        background-color: rgb(206, 208, 164);
+   $widescreen
   }
-
+  }
   @include desktop-only {
-    // Styles applied
-    // between $desktop
-    // and $widescreen
+    body{
+        background-color: rgb(165, 161, 133);
+    $fullhd
   }
-
+  }
