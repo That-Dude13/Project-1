@@ -80,7 +80,7 @@ function search() {
 
  
   
-    document.getElementById(result).innerHTML = localStorage.getItem("recipes[0].instructions");
+   
     
   
   
